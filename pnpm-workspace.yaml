@@ -1,0 +1,30 @@
+packages:
+  - 'apps/*'
+  - 'packages/*'
+
+catalog:
+  lucide-react: ^0.451.0
+  tailwindcss: ^3.4.13
+  postcss: ^8.0.0
+  prettier: ^3.3.3
+  typescript: ^5.6.3
+  vite: ^5.4.8
+  superjson: ^2.2.1
+  autoprefixer: ^10
+  zod: ^3.23.8
+  '@vitejs/plugin-react': ^4.3.2
+  '@types/node': ^20
+  '@electron-toolkit/preload': ^3.0.1
+  '@tanstack/react-query': ^5.59.14
+  '@tanstack/react-router': '^1.78.0'
+  '@trpc/client': ^11.0.0-rc.576
+  '@trpc/react-query': ^11.0.0-rc.576
+  '@trpc/server': ^11.0.0-rc.576
+  wrangler: ^3.99.0
+
+catalogs:
+  react18:
+    react: ^18.3.1
+    react-dom: ^18.3.1
+    '@types/react': ^18.3.11
+    '@types/react-dom': ^18.3.0

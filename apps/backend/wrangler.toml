@@ -1,0 +1,32 @@
+name = "ltw-backend"
+main = "src/index.ts"
+compatibility_date = "2023-01-01"
+
+[observability.logs]
+enabled = true
+
+[build]
+command = "pnpm run build"
+
+[vars]
+ENVIRONMENT = "production"
+
+[env.production]
+routes = [
+  { pattern = "api.logtheway.com", custom_domain = true }
+]
+vars = { ENVIRONMENT = "production" }
+
+[env.development]
+routes = [
+  { pattern = "api.dev.logtheway.com", custom_domain = true }
+]
+vars = { ENVIRONMENT = "development" }
+
+# Add any other environment variables your app needs
+# [vars]
+# MY_VARIABLE = "my-value"
+
+# Use secrets for sensitive information
+# [secrets]
+# MY_SECRET

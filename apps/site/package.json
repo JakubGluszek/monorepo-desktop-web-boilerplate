@@ -1,0 +1,48 @@
+{
+  "name": "site",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro check && astro build",
+    "astro": "astro",
+    "typecheck": "tsc --noEmit -p tsconfig.json",
+    "preview": "wrangler pages dev ./dist",
+    "deploy:dev": "pnpm build && wrangler pages deploy ./dist --project-name=ltw-site-dev",
+    "deploy:prod": "pnpm build && wrangler pages deploy ./dist --project-name=ltw-site"
+  },
+  "dependencies": {
+    "@astrojs/check": "^0.9.4",
+    "@astrojs/node": "^8.3.4",
+    "@astrojs/react": "^3.6.2",
+    "@astrojs/tailwind": "^5.1.2",
+    "@hookform/resolvers": "^3.9.1",
+    "@ltw/app": "workspace:*",
+    "@ltw/shared": "workspace:*",
+    "@ltw/ui": "workspace:*",
+    "@tanstack/react-query": "catalog:",
+    "@types/react": "catalog:react18",
+    "@types/react-dom": "catalog:react18",
+    "astro": "^4.16.7",
+    "backend": "workspace:*",
+    "dayjs": "^1.11.13",
+    "hono": "^4.6.5",
+    "lodash": "^4.17.21",
+    "lucide-react": "catalog:",
+    "react": "catalog:react18",
+    "react-dom": "catalog:react18",
+    "react-hook-form": "^7.53.1",
+    "sonner": "^1.7.0",
+    "tailwindcss": "catalog:",
+    "typescript": "catalog:",
+    "zod": "catalog:"
+  },
+  "devDependencies": {
+    "@types/lodash": "^4.17.12",
+    "@types/node": "^22.8.7",
+    "prettier": "catalog:",
+    "prettier-plugin-astro": "^0.14.1",
+    "wrangler": "catalog:"
+  }
+}

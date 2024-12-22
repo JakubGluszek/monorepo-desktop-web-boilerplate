@@ -1,0 +1,33 @@
+{
+  "name": "@ltw/shared",
+  "version": "0.0.1",
+  "scripts": {
+    "clean": "rm -rf ./node_modules/"
+  },
+  "dependencies": {
+    "hono": "^4.6.5",
+    "@ltw/ui": "workspace:*",
+    "backend": "workspace:*",
+    "react": "catalog:react18",
+    "react-dom": "catalog:react18",
+    "@tanstack/react-query": "catalog:",
+    "@trpc/client": "catalog:",
+    "@trpc/server": "catalog:",
+    "@trpc/react-query": "catalog:",
+    "@electron-toolkit/preload": "catalog:",
+    "superjson": "catalog:"
+  },
+  "devDependencies": {
+    "@ltw/typescript-config": "workspace:*",
+    "@types/node": "catalog:",
+    "@types/react": "catalog:react18",
+    "@types/react-dom": "catalog:react18",
+    "typescript": "catalog:"
+  },
+  "exports": {
+    "./react-query": "./src/react-query/index.ts",
+    "./trpc": "./src/trpc/index.ts",
+    "./rpc": "./src/rpc/index.ts",
+    "./types/*": "./src/types/*.d.ts"
+  }
+}

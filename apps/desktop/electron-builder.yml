@@ -1,0 +1,86 @@
+appId: com.electron.logtheway
+productName: logtheway
+directories:
+  buildResources: build
+files:
+  - '!**/.vscode/*'
+  - '!src/*'
+  - '!electron.vite.config.{js,ts,mjs,cjs}'
+  - '!{.prettierignore,.prettierrc.yaml,dev-app-update.yml,CHANGELOG.md,README.md}'
+  - '!{.env,.env.*,.npmrc,pnpm-lock.yaml}'
+  - '!{tsconfig.json,tsconfig.node.json,tsconfig.web.json}'
+asarUnpack:
+  - resources/**
+
+win:
+  executableName: logtheway
+  icon: build/icon.ico
+
+nsis:
+  artifactName: ${productName}-${version}-setup.${ext}
+  shortcutName: ${productName}
+  uninstallDisplayName: ${productName}
+  createDesktopShortcut: always
+
+mac:
+  entitlementsInherit: build/entitlements.mac.plist
+  extendInfo:
+    - NSCameraUsageDescription: Application requests access to the device's camera.
+    - NSMicrophoneUsageDescription: Application requests access to the device's microphone.
+    - NSDocumentsFolderUsageDescription: Application requests access to the user's Documents folder.
+    - NSDownloadsFolderUsageDescription: Application requests access to the user's Downloads folder.
+  notarize: false
+  hardenedRuntime: true
+  gatekeeperAssess: false
+  icon: build/icon.icns
+
+dmg:
+  artifactName: ${productName}-${version}.${ext}
+  sign: false
+
+linux:
+  icon: build/icon.png
+  target:
+    - AppImage
+    - snap
+    - deb
+  maintainer: logtheway.com
+  category: Utility
+  executableName: logtheway
+
+appImage:
+  artifactName: ${productName}-${version}.${ext}
+
+snap:
+  artifactName: ${productName}-${version}.${ext}
+  plugs:
+    - default
+    - desktop
+    - desktop-legacy
+    - home
+    - x11
+    - wayland
+    - unity7
+    - browser-support
+    - network
+    - gsettings
+    - pulseaudio
+    - opengl
+
+deb:
+  artifactName: ${productName}-${version}.${ext}
+  depends:
+    - libgtk-3-0
+    - libnotify4
+    - libnss3
+    - libxss1
+    - libxtst6
+    - xdg-utils
+    - libatspi2.0-0
+    - libuuid1
+    - libsecret-1-0
+
+npmRebuild: false
+publish:
+  provider: generic
+  url: https://logtheway.com/auto-updates

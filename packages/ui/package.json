@@ -1,0 +1,64 @@
+{
+  "name": "@ltw/ui",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "ui": "pnpm dlx shadcn@latest",
+    "clean": "rm -rf ./node_modules/"
+  },
+  "peerDependencies": {
+    "react": "^18"
+  },
+  "devDependencies": {
+    "@ltw/typescript-config": "workspace:*",
+    "@types/node": "catalog:",
+    "@types/react": "catalog:react18",
+    "autoprefixer": "catalog:",
+    "postcss": "catalog:",
+    "postcss-load-config": "^6",
+    "tailwindcss": "catalog:",
+    "typescript": "catalog:"
+  },
+  "dependencies": {
+    "@hookform/resolvers": "^3.9.1",
+    "@radix-ui/react-avatar": "^1.1.1",
+    "@radix-ui/react-checkbox": "^1.1.2",
+    "@radix-ui/react-collapsible": "^1.1.1",
+    "@radix-ui/react-dialog": "^1.1.2",
+    "@radix-ui/react-dropdown-menu": "^2.1.2",
+    "@radix-ui/react-hover-card": "^1.1.2",
+    "@radix-ui/react-label": "^2.1.0",
+    "@radix-ui/react-popover": "^1.1.2",
+    "@radix-ui/react-progress": "^1.1.0",
+    "@radix-ui/react-scroll-area": "^1.2.1",
+    "@radix-ui/react-select": "^2.1.2",
+    "@radix-ui/react-separator": "^1.1.0",
+    "@radix-ui/react-slot": "^1.1.0",
+    "@radix-ui/react-switch": "^1.1.1",
+    "@radix-ui/react-tabs": "^1.1.1",
+    "@radix-ui/react-tooltip": "^1.1.4",
+    "class-variance-authority": "^0.7.0",
+    "clsx": "^2.1.1",
+    "cmdk": "1.0.0",
+    "date-fns": "^4.1.0",
+    "input-otp": "^1.4.1",
+    "lucide-react": "catalog:",
+    "next-themes": "^0.4.3",
+    "react-day-picker": "8.10.1",
+    "react-hook-form": "^7.53.1",
+    "sonner": "^1.7.0",
+    "tailwind-merge": "^2.3.0",
+    "tailwindcss-animate": "^1.0.7",
+    "zod": "catalog:",
+    "motion": "^11.11.15",
+    "framer-motion": "^11.11.17"
+  },
+  "exports": {
+    "./globals.css": "./src/globals.css",
+    "./postcss.config": "./postcss.config.mjs",
+    "./tailwind.config": "./tailwind.config.ts",
+    "./lib/*": "./src/lib/*.ts",
+    "./hooks/*": "./src/hooks/*.tsx",
+    "./components/*": "./src/components/*.tsx"
+  }
+}

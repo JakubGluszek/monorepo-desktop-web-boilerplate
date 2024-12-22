@@ -1,0 +1,39 @@
+{
+  "name": "web",
+  "private": true,
+  "version": "0.0.1",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host",
+    "build": "tsc -b && vite build",
+    "typecheck": "tsc --noEmit -p tsconfig.json",
+    "clean": "rm -rf ./node_modules/ ./dist",
+    "preview": "wrangler pages dev ./dist",
+    "deploy:dev": "pnpm build && wrangler pages deploy ./dist --project-name=ltw-web-dev",
+    "deploy:prod": "pnpm build && wrangler pages deploy ./dist --project-name=ltw-web"
+  },
+  "dependencies": {
+    "backend": "workspace:*",
+    "@ltw/app": "workspace:*",
+    "@ltw/shared": "workspace:*",
+    "@ltw/ui": "workspace:*",
+    "react": "catalog:react18",
+    "@electron-toolkit/preload": "catalog:",
+    "react-dom": "catalog:react18",
+    "@tanstack/react-router": "^1.78.0"
+  },
+  "devDependencies": {
+    "@ltw/typescript-config": "workspace:*",
+    "@types/node": "catalog:",
+    "@types/react": "catalog:react18",
+    "@types/react-dom": "catalog:react18",
+    "@vitejs/plugin-react": "catalog:",
+    "autoprefixer": "catalog:",
+    "globals": "^15.9.0",
+    "postcss": "catalog:",
+    "tailwindcss": "catalog:",
+    "typescript": "catalog:",
+    "vite": "catalog:",
+    "wrangler": "catalog:"
+  }
+}

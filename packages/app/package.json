@@ -1,0 +1,33 @@
+{
+  "name": "@ltw/app",
+  "version": "0.0.1",
+  "scripts": {
+    "clean": "rm -rf ./node_modules/"
+  },
+  "dependencies": {
+    "@ltw/shared": "workspace:*",
+    "@ltw/ui": "workspace:*",
+    "react": "catalog:react18",
+    "react-dom": "catalog:react18",
+    "electron": "^30.0.1",
+    "@tanstack/react-query": "catalog:",
+    "@tanstack/react-router": "catalog:",
+    "hono": "^4.6.5",
+    "lucide-react": "catalog:",
+    "sonner": "^1.7.0"
+  },
+  "devDependencies": {
+    "@ltw/typescript-config": "workspace:*",
+    "@types/emoji-mart": "^3.0.14",
+    "@types/node": "catalog:",
+    "@types/react": "catalog:react18",
+    "@types/react-dom": "catalog:react18",
+    "autoprefixer": "catalog:",
+    "postcss": "catalog:",
+    "tailwindcss": "catalog:",
+    "typescript": "catalog:"
+  },
+  "exports": {
+    ".": "./src/App.tsx"
+  }
+}
